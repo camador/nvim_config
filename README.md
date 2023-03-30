@@ -448,7 +448,8 @@ Fichero [~/.config/nvim/lua/mi_config/nerd-tree.lua](config_nvim/lua/mi_config/n
 ## Referencias
 
 - [Neovim IDE from Scratch](https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ), de [chris@machine](https://github.com/LunarVim/Neovim-from-scratch).
-- [0 to LSP : Neovim RC From Scratch](https://www.youtube.com/watch?v=w7i4amO_zaE) de [ThePrimeagen](https://github.com/ThePrimeagen).
+- [0 to LSP : Neovim RC From Scratch](https://www.youtube.com/watch?v=w7i4amO_zaE), de [ThePrimeagen](https://github.com/ThePrimeagen).
+- [Effective Neovim: Instant IDE](https://www.youtube.com/watch?v=stqUbv-5u2s), de [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim).
 - [camador/neovim_IDE_from_scratch](https://github.com/camador/neovim_IDE_from_scratch).
 - [camador/nvim_config_0_to_LSP](https://github.com/camador/nvim_config_0_to_LSP).
 - [camador/vim_config](https://github.com/camador/vim_config).
