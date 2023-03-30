@@ -1,0 +1,10 @@
+# Ficheros temporales
+*.swp
+
+# Ficheros de vim/neovim
+.netrwhist
+config_nvim/plugin/packer_compiled.lua
+local_share_nvim/**/*.log
+local_share_nvim/site/pack/packer
+local_share_nvim/telescope_history
+local_share_nvim/mason
