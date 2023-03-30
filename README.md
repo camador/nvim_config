@@ -217,6 +217,34 @@ sudo update-alternatives --config editor
 
 ### Ayudas del código
 
+#### nvim-treesitter 
+
+##### Selección incremental
+
+- `<C-Space>`: Inicia la selección.
+- `<C-Space>`: Incrementa la selección un nodo.
+- `<C-s>`: Incrementa el scope de la selección.
+- `<S-Space>`: Decrementa la selección un nodo.
+
+#### nvim-autopairs
+
+- `M-e`: Ejecuta la función [FastWrap](https://github.com/windwp/nvim-autopairs#fastwrap) de [nvim-autopairs](https://github.com/windwp/nvim-autopairs). Permite elegir la ubicación del par de cierre. [Demo](https://github.com/windwp/nvim-autopairs#fastwrap).
+
+#### Comments.nvim
+
+##### Normal mode
+
+- `gcc`: Conmuta el comentario en la línea actual.
+- `gbc`: Conmuta el comentario en el bloque de la línea actual.
+- `gco`: Inserta un comentario en la línea siguiente y entra en modo de inserción.
+- `gcO`: Inserta un comentario en la línea anterior y entra en modo de inserción.
+- `gcA`: Inserta un comentario al final de la línea actual y entra en modo de inserción.
+
+##### Visual mode
+
+- `gc`: Conmuta el comentario en la selección. Comentario por línea.
+- `gb`: Conmuta el comentario en la selección. Comentario por bloque.
+
 #### Autocompletando código
 
 - `<C-k>`: Anterior ítem.
@@ -248,25 +276,6 @@ sudo update-alternatives --config editor
 - `<leader>ca`: Muestra una lista de acciones de código disponibles en la posición actual del cursor.
 - `<leader>gr`: Muestra todas las referencias al símbolo sobre el que se encuentre el cursor en la ventana quickfix (`:cw`) de Neovim.
 - `<leader>f`: Formatea el código del buffer según el servidor LSP asociado.
-
-#### nvim-autopairs
-
-- `M-e`: Ejecuta la función [FastWrap](https://github.com/windwp/nvim-autopairs#fastwrap) de [nvim-autopairs](https://github.com/windwp/nvim-autopairs). Permite elegir la ubicación del par de cierre. [Demo](https://github.com/windwp/nvim-autopairs#fastwrap).
-
-#### Comments.nvim
-
-##### Normal mode
-
-- `gcc`: Conmuta el comentario en la línea actual.
-- `gbc`: Conmuta el comentario en el bloque de la línea actual.
-- `gco`: Inserta un comentario en la línea siguiente y entra en modo de inserción.
-- `gcO`: Inserta un comentario en la línea anterior y entra en modo de inserción.
-- `gcA`: Inserta un comentario al final de la línea actual y entra en modo de inserción.
-
-##### Visual mode
-
-- `gc`: Conmuta el comentario en la selección. Comentario por línea.
-- `gb`: Conmuta el comentario en la selección. Comentario por bloque.
 
 ### Telescope
 
