@@ -83,8 +83,12 @@ En Neovim, instalar/actualizar los plugins:
 :PackerSync
 ```
 
-Si `Packer` no puede instalar `Mason` hay que reiniciar Neovim.
+Reiniciar Neovim.
 
+Establecer Neovim como editor del sistema (seleccionar `/usr/bin/nvim`):
+```sh
+sudo update-alternatives --config editor
+```
 </details>
 
 ## Plugins
