@@ -10,26 +10,27 @@ Ficheros de configuración para linux.
 1. [Instalación](#instalación)
 2. [Plugins](#plugins)
    1. [Esquemas de colores](#esquemas-de-colores)
-   2. [Autocompletado de código](#autocompletado-de-código)
-      1. [Snippets](#snippets)
-   3. [LSP](#lsp)
-   4. [Búsqueda difusa](#búsqueda-difusa)
-   5. [Ayudas para el código](#ayudas-para-el-código)
-   6. [Git](#git)
-   7. [Interfaz](#interfaz)
+   2. [Ayudas para el código](#ayudas-para-el-código)
+      1. [Autocompletado de código](#autocompletado-de-código)
+         1. [Snippets](#snippets)
+      2. [LSP](#lsp)
+   3. [Búsqueda difusa](#búsqueda-difusa)
+   4. [Git](#git)
+   5. [Interfaz](#interfaz)
 3. [Atajos de teclado](#atajos-de-teclado-personalizados)
    1. [Normal mode](#normal-mode)
    2. [Visual mode](#visual-mode)
    3. [Visual block mode](#visual-block-mode)
    4. [Terminal block mode](#terminal-block-mode)
-   5. [Autocompletando código](#autocompletando-código)
-      1. [Diagnóstico](#diagnóstico)
-      2. [Buffers con LSP](#buffers-con-lsp)
+   5. [Ayudas del código](#ayudas-del-código)
+      1. [Autocompletando código](#autocompletando-código)
+          1. [Diagnóstico](#diagnóstico)
+          2. [Buffers con LSP](#buffers-con-lsp)
+      2. [nvim-autopairs](#nvim-autopairs)
+      3. [Comments.nvim](#Commentsnvim)
    6. [telescope.nvim](#telescope)
-   7. [nvim-autopairs](#nvim-autopairs)
-   8. [Comments.nvim](#Commentsnvim)
-   9. [gitsigns.nvim](#gitsigns.nvim)
-   10. [nvim-tree.lua](#nvim-treelua)
+   7. [gitsigns.nvim](#gitsigns.nvim)
+   8. [nvim-tree.lua](#nvim-treelua)
 4. [Descripción](#descripción)
    1. [Opciones de configuración](#opciones-de-configuración)
    2. [Atajos de teclado](#atajos-de-teclado)
@@ -101,7 +102,16 @@ Si `Packer` no puede instalar `Mason` hay que reiniciar Neovim.
 - [Tokyo Night](https://github.com/folke/tokyonight.nvim): Varios esquema de colores.
 - [Edge](https://github.com/sainnhe/edge): Esquema de colores.
 
-## Autocompletado de código
+## Ayudas para el código
+
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): Mejora el coloreado del código y permite auto indentado.
+- [nvim-ts-rainbow](https://github.com/p00f/nvim-ts-rainbow): Muestra cada par de paréntesis de un color distinto.
+- [nvim-autopairs](https://github.com/windwp/nvim-autopairs): Cierra automática los pares de paréntisis, comillas, etc. Se integra con [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) y [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
+- [Comment.nvim](https://github.com/numToStr/Comment.nvim): Facilita el comentado de código.
+- [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring): Comentarios según el contexto usando [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
+- [vim-surround](https://github.com/tpope/vim-surround): Inserta y edita pares de tags, paréntesis, comillas, etc.
+
+### Autocompletado de código
 
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp): Plugin para autocompletado.
 - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer): Fuente para autocompletado de buffers.
@@ -109,12 +119,12 @@ Si `Packer` no puede instalar `Mason` hay que reiniciar Neovim.
 - [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline): Fuente para autocompletado de línea de comandos.
 - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip): Fuente para autocompletado de snippets.
 
-### Snippets
+#### Snippets
 
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip): Motor para snippets.
 - [Friendly Snippets](https://github.com/rafamadriz/friendly-snippets): Snippets de muchos lenguajes.
 
-## LSP
+### LSP
 
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig): Configuraciones para el [cliente LSP de Neovim](https://neovim.io/doc/user/lsp.html).
 - [mason.nvim](https://github.com/williamboman/mason.nvim): Gestor de servidores LSP.
@@ -127,15 +137,6 @@ Si `Packer` no puede instalar `Mason` hay que reiniciar Neovim.
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim): Herramienta configurable y extensible de búsqueda difusa.
 - [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim): Ordenador (sorter) nativo de [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) para mejorar el rendimiento.
 - [Nvim-web-devincos](https://github.com/nvim-tree/nvim-web-devicons): Iconos de ficheros para [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim).
-
-## Ayudas para el código
-
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): Mejora el coloreado del código y permite auto indentado.
-- [nvim-ts-rainbow](https://github.com/p00f/nvim-ts-rainbow): Muestra cada par de paréntesis de un color distinto.
-- [nvim-autopairs](https://github.com/windwp/nvim-autopairs): Cierra automática los pares de paréntisis, comillas, etc. Se integra con [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) y [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
-- [Comment.nvim](https://github.com/numToStr/Comment.nvim): Facilita el comentado de código.
-- [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring): Comentarios según el contexto usando [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
-- [vim-surround](https://github.com/tpope/vim-surround): Inserta y edita pares de tags, paréntesis, comillas, etc.
 
 ## Git
 
@@ -154,59 +155,61 @@ Si `Packer` no puede instalar `Mason` hay que reiniciar Neovim.
 
 - La tecla `<leader>` es la barra espaciadora.
 
-## Normal mode
+### Normal mode
 
-### Navegación entre ventanas (splits) más sencilla
+#### Navegación entre ventanas (splits) más sencilla
 
 - `<C-h>`: Para moverse a la ventana derecha en lugar de `<C-w>h`.
 - `<C-j>`: Para moverse a la ventana inferior en lugar de `<C-w>j`.
 - `<C-k>`: Para moverse a la ventana superior en lugar de `<C-w>k`.
 - `<C-l>`: Para moverse a la ventana izquierda en lugar de `<C-w>l`.
 
-### Redimensión con los cursores
+#### Redimensión con los cursores
 
 - `<C-Up>`: Aumenta el tamaño horizontal.
 - `<C-Down>`: Reduce el tamaño horizontal.
 - `<C-Left>`: Aumenta el tamaño vertical.
 - `<C-Right>`: Reduce el tamaño vertical.
 
-### Navegación entre buffers
+#### Navegación entre buffers
 
 - `<S-l>`: Siguiente buffer.
 - `<S-h>`: Anterior buffer.
 
-## Visual mode
+### Visual mode
 
-### Permanece en visual mode al indentar
+#### Permanece en visual mode al indentar
 
 - `>`: Aumenta la indentación y conserva la selección.
 - `<`: Reduce la indentación y conserva la selección.
 
-### Mueve el texto seleccionado
+#### Mueve el texto seleccionado
 
 - `<A-k>`: Mueve el texto seleccionado hacia arriba.
 - `<A-j>`: Mueve el texto seleccionado hacia abajo.
 - `p`: Permite pegar un texto previamente seleccionado (yunk) sobre otro sin perder sin perder la selección original. [Demo](https://youtu.be/w7i4amO_zaE?t=1593).
 
-## Visual block mode
+### Visual block mode
 
-### Mueve el texto seleccionado
+#### Mueve el texto seleccionado
 
 - `K`: Mueve el texto seleccionado hacia arriba.
 - `J`: Mueve el texto seleccionado hacia abajo.
 - `<A-k>`: Mueve el texto seleccionado hacia arriba.
 - `<A-j>`: Mueve el texto seleccionado hacia abajo.
 
-## Terminal mode
+### Terminal mode
 
-### Navegación entre terminales más sencilla
+#### Navegación entre terminales más sencilla
 
 - `<C-h>`: Para moverse al terminal derecha.
 - `<C-j>`: Para moverse al terminal inferior.
 - `<C-k>`: Para moverse al terminal superior.
 - `<C-l>`: Para moverse al terminal izquierda.
 
-### Autocompletando código
+### Ayudas del código
+
+#### Autocompletando código
 
 - `<C-k>`: Anterior ítem.
 - `<C-j>`: Siguiente ítem.
@@ -215,14 +218,14 @@ Si `Packer` no puede instalar `Mason` hay que reiniciar Neovim.
 - `<C-b>`: Desplazamiento en popups que no caben en la pantalla.
 - `<C-f>`: Desplazamiento en popups que no caben en la pantalla.
 
-#### Diagnóstico
+##### Diagnóstico
 
 - `<leader>l`: Lista de diagnósticos de la línea en la que se encuentra el cursor.
 - `[d`: Ir al siguiente ítem de diagnóstico.
 - `]d`: Ir al anterior ítem de diagnóstico.
 - `<leader>q`: Muestra todas las líneas de diagnóstico del buffer en la lista de ubicaciones (`:lw`) de Neovim.
 
-#### Buffers con LSP
+##### Buffers con LSP
 
 - `<leader>gD`: Ir a la declaración del símbolo sobre el que se encuentre el cursor.
 - `<leader>gD`: Ir a la definición del símbolo sobre el que se encuentre el cursor.
@@ -237,6 +240,25 @@ Si `Packer` no puede instalar `Mason` hay que reiniciar Neovim.
 - `<leader>ca`: Muestra una lista de acciones de código disponibles en la posición actual del cursor.
 - `<leader>gr`: Muestra todas las referencias al símbolo sobre el que se encuentre el cursor en la ventana quickfix (`:cw`) de Neovim.
 - `<leader>f`: Formatea el código del buffer según el servidor LSP asociado.
+
+#### nvim-autopairs
+
+- `M-e`: Ejecuta la función [FastWrap](https://github.com/windwp/nvim-autopairs#fastwrap) de [nvim-autopairs](https://github.com/windwp/nvim-autopairs). Permite elegir la ubicación del par de cierre. [Demo](https://github.com/windwp/nvim-autopairs#fastwrap).
+
+#### Comments.nvim
+
+##### Normal mode
+
+- `gcc`: Conmuta el comentario en la línea actual.
+- `gbc`: Conmuta el comentario en el bloque de la línea actual.
+- `gco`: Inserta un comentario en la línea siguiente y entra en modo de inserción.
+- `gcO`: Inserta un comentario en la línea anterior y entra en modo de inserción.
+- `gcA`: Inserta un comentario al final de la línea actual y entra en modo de inserción.
+
+##### Visual mode
+
+- `gc`: Conmuta el comentario en la selección. Comentario por línea.
+- `gb`: Conmuta el comentario en la selección. Comentario por bloque.
 
 ### Telescope
 
@@ -274,37 +296,18 @@ Si `Packer` no puede instalar `Mason` hay que reiniciar Neovim.
 - `C-j`: Muestra el siguiente ítem del historial de búsquedas.
 - `C-k`: Muestra el anterior ítem del historial de búsquedas.
 
-#### Modo normal
+##### Modo normal
 
 - `?`: Muestra los atajos de teclado disponibles en Telescope para el modo normal. El resultado depende del tipo de búsqueda (`Picker`) que se esté realizando (ficheros, Git, etc).
 
-### nvim-autopairs
-
-- `M-e`: Ejecuta la función [FastWrap](https://github.com/windwp/nvim-autopairs#fastwrap) de [nvim-autopairs](https://github.com/windwp/nvim-autopairs). Permite elegir la ubicación del par de cierre. [Demo](https://github.com/windwp/nvim-autopairs#fastwrap).
-
-### Comments.nvim
-
-#### Normal mode
-
-- `gcc`: Conmuta el comentario en la línea actual.
-- `gbc`: Conmuta el comentario en el bloque de la línea actual.
-- `gco`: Inserta un comentario en la línea siguiente y entra en modo de inserción.
-- `gcO`: Inserta un comentario en la línea anterior y entra en modo de inserción.
-- `gcA`: Inserta un comentario al final de la línea actual y entra en modo de inserción.
-
-#### Visual mode
-
-- `gc`: Conmuta el comentario en la selección. Comentario por línea.
-- `gb`: Conmuta el comentario en la selección. Comentario por bloque.
-
 ### gitsigns.nvim
 
-#### Navegación
+##### Navegación
 
 - `]c`: Ir al cambio siguiente.
 - `[c`: Ir al cambio anterior.
 
-#### Acciones
+##### Acciones
 
 - `<leader>hp`: Muestra un popup con los cambios de la línea actual.
 - `<leader>hb`: Muestra un popup con el blame de la línea actual.
