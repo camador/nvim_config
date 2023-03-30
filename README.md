@@ -135,6 +135,7 @@ Si `Packer` no puede instalar `Mason` hay que reiniciar Neovim.
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs): Cierra automática los pares de paréntisis, comillas, etc. Se integra con [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) y [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim): Facilita el comentado de código.
 - [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring): Comentarios según el contexto usando [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
+- [vim-surround](https://github.com/tpope/vim-surround): Inserta y edita pares de tags, paréntesis, comillas, etc.
 
 ## Git
 
