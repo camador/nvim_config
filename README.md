@@ -110,6 +110,7 @@ Si `Packer` no puede instalar `Mason` hay que reiniciar Neovim.
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim): Facilita el comentado de código.
 - [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring): Comentarios según el contexto usando [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
 - [vim-surround](https://github.com/tpope/vim-surround): Inserta y edita pares de tags, paréntesis, comillas, etc.
+- [vim-rails](https://github.com/tpope/vim-rails): Desarrollo de aplicaciones Rails.
 
 ### Autocompletado de código
 
