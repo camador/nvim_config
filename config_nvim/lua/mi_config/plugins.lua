@@ -102,11 +102,12 @@ return packer.startup(function(use)
   use("tpope/vim-surround")                                    -- Inserta y edita pares de tags, paréntesis, comillas, etc.
 
   -- Git
-  use("lewis6991/gitsigns.nvim")                               -- Indicadores visuales para los cambios de Git
+  use("lewis6991/gitsigns.nvim") -- Indicadores visuales para los cambios de Git
 
-  -- Interfaz
-  use("nvim-tree/nvim-tree.lua") -- A File Explorer For Neovim Written In Lua
+  -- Interfaz y navegación
+  use("nvim-tree/nvim-tree.lua")  -- A File Explorer For Neovim Written In Lua
   use("nvim-lualine/lualine.nvim") -- Statusline
+  use("easymotion/vim-easymotion") -- Facilita y acelera los movimientos en el texto visualizado.
   --
   -- End of my plugins
   --

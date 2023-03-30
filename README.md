@@ -16,7 +16,7 @@ Ficheros de configuración para linux.
       2. [LSP](#lsp)
    3. [Búsqueda difusa](#búsqueda-difusa)
    4. [Git](#git)
-   5. [Interfaz](#interfaz)
+   5. [Interfaz y navegación](#interfaz-y-navegación)
 3. [Atajos de teclado](#atajos-de-teclado-personalizados)
    1. [Normal mode](#normal-mode)
    2. [Visual mode](#visual-mode)
@@ -142,10 +142,11 @@ Si `Packer` no puede instalar `Mason` hay que reiniciar Neovim.
 
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim): Indicadores visuales de Git.
 
-## Interfaz
+## Interfaz y navegación
 
-- [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua): Un explorador de ficheros escrito en Lua que sustituya a `:Explorer`
+- [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua): Un explorador de ficheros escrito en Lua que sustituya a `:Explorer`.
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim): Statusline mejorada.
+- [EasyMotion](https://github.com/easymotion/vim-easymotion): Facilita y acelera los movimientos en el texto visualizado.
 </details>
 
 ## Atajos de teclado personalizados
