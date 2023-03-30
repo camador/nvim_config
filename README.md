@@ -24,8 +24,8 @@ Ficheros de configuración para linux.
    4. [Terminal block mode](#terminal-block-mode)
    5. [Ayudas del código](#ayudas-del-código)
       1. [Autocompletando código](#autocompletando-código)
-          1. [Diagnóstico](#diagnóstico)
-          2. [Buffers con LSP](#buffers-con-lsp)
+         1. [Diagnóstico](#diagnóstico)
+         2. [Buffers con LSP](#buffers-con-lsp)
       2. [nvim-autopairs](#nvim-autopairs)
       3. [Comments.nvim](#Commentsnvim)
    6. [telescope.nvim](#telescope)
@@ -86,9 +86,11 @@ En Neovim, instalar/actualizar los plugins:
 Reiniciar Neovim.
 
 Establecer Neovim como editor del sistema (seleccionar `/usr/bin/nvim`):
+
 ```sh
 sudo update-alternatives --config editor
 ```
+
 </details>
 
 ## Plugins
@@ -165,10 +167,10 @@ sudo update-alternatives --config editor
 
 #### Navegación entre ventanas (splits) más sencilla
 
-- `<C-h>`: Para moverse a la ventana derecha en lugar de `<C-w>h`.
+- `<C-h>`: Para moverse a la ventana izquierda en lugar de `<C-w>h`.
 - `<C-j>`: Para moverse a la ventana inferior en lugar de `<C-w>j`.
 - `<C-k>`: Para moverse a la ventana superior en lugar de `<C-w>k`.
-- `<C-l>`: Para moverse a la ventana izquierda en lugar de `<C-w>l`.
+- `<C-l>`: Para moverse a la ventana derecha en lugar de `<C-w>l`.
 
 #### Redimensión con los cursores
 
@@ -315,18 +317,24 @@ sudo update-alternatives --config editor
 
 ##### Acciones
 
+- `<leader>hs`: Pasa los cambios de la línea o selección actual al index (`git add`).
+- `<leader>hr`: Descarta los cambios de la línea o selección actual (`git reset`).
+- `<leader>hS`: Pasa todos los cambios del buffer al index (`git add`).
+- `<leader>hu`: Deshace el último paso a index (`git restore`).
+- `<leader>hR`: Descarta los cambios del buffer (`git reset`).
 - `<leader>hp`: Muestra un popup con los cambios de la línea actual.
 - `<leader>hb`: Muestra un popup con el blame de la línea actual.
 - `<leader>tb`: Conmuta la visualización del blame de la línea actual al final de la línea.
-- `<leader>hd`: Realiza un diff de los cambios.
-- `<leader>hD`: Realiza un diff de todo el fichero.
+- `<leader>hd`: Realiza un diff contra index.
+- `<leader>hD`: Realiza un diff de contra HEAD.
+- `<leader>td`: Conmuta la visualización de las líneas eliminadas.
 
 ### nvim-tree.lua
 
 #### En un buffer
 
 - `<leader>e`: Comnuta la visualización del explorador de ficheros en la parte izquierda.
-- `<leader>E`: Abre el explorador de ficheros y selección el fichero correspondiente al buffer actual, desplegando los directorios si es necesario.
+- `<leader>E`: Abre el explorador de ficheros y selecciona el fichero correspondiente al buffer actual, desplegando los directorios si es necesario.
 
 #### En el explorador de ficheros
 
