@@ -55,7 +55,7 @@ Ficheros de configuración para linux.
 <summary>Ver instrucciones de instalación</summary>
 
 ```sh
-git clone git@github.com:camador/neovim_IDE_from_scratch.git ~/desarrollo/nvim_config
+git clone git@github.com:camador/nvim_config.git ~/desarrollo/nvim_config
 ln -s ~/desarrollo/nvim_config/config_nvim ~/.config/nvim
 ln -s ~/desarrollo/nvim_config/local_share_nvim ~/.local/share/nvim
 sudo apt install xclip fonts-firacode git ripgrep fd-find tar curl
