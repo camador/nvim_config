@@ -297,6 +297,7 @@ sudo update-alternatives --config editor
 
 - `<leader>vc`: Lista de comandos de plugins/usuario disponibles.
 - `<leader>vh`: Histórico de comandos ejecutados.
+- `<leader>vk`: Lista de atajaos de teclado.
 
 #### Modo inserción
 

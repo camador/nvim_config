@@ -9,28 +9,29 @@ end
 local builtin = require('telescope.builtin')
 
 -- Búsqueda de ficheros
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {}) -- ff - Find files
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {}) -- fb - Find buffers
-vim.keymap.set('n', '<leader>fc', builtin.grep_string, {}) -- fc - Find string under cursor or selection
-vim.keymap.set('n', '<leader>fh', builtin.search_history, {}) -- fh - Histórico de búsquedas
-vim.keymap.set('n', '<leader>fs', function() -- fs - Find search a string
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = '[F]ind [f]ile' }) -- ff - Find files
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = '[F]ind open [b]uffer' }) -- fb - Find buffers
+vim.keymap.set('n', '<leader>fc', builtin.grep_string, { desc = '[F]ind string under [c]ursor' }) -- fc - Find string under cursor or selection
+vim.keymap.set('n', '<leader>fh', builtin.search_history, { desc = '[F]ind search [h]istory' }) -- fh - Histórico de búsquedas
+vim.keymap.set('n', '<leader>fs', function() -- fs - Find a string
 	builtin.grep_string({ search = vim.fn.input("Grep > ") });
-end)
+end, { desc = '[F]ind [s]tring' })
 
 -- Git
-vim.keymap.set('n', '<C-p>', builtin.git_files, {}) -- Ctrl-p - Solo ficheros de Git
-vim.keymap.set('n', '<leader>gb', builtin.git_branches, {}) -- gb - Git branches
-vim.keymap.set('n', '<leader>gc', builtin.git_commits, {}) -- gc - Git commits
-vim.keymap.set('n', '<leader>gst', builtin.git_status, {}) -- gst - Git status
+vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = 'Find Git files' }) -- Ctrl-p - Solo ficheros de Git
+vim.keymap.set('n', '<leader>gb', builtin.git_branches, { desc = 'Find [G]it [b]ranches' }) -- gb - Git branches
+vim.keymap.set('n', '<leader>gc', builtin.git_commits, { desc = 'Find [G]it [c]ommits' }) -- gc - Git commits
+vim.keymap.set('n', '<leader>gst', builtin.git_status, { desc = 'Find [G]it [st]atus' }) -- gst - Git status
 
 -- LSP
-vim.keymap.set('n', '<leader>ld', builtin.diagnostics, {}) -- ld - Lista de avisos LSP
-vim.keymap.set('n', '<leader>lr', builtin.lsp_references, {}) -- ls - Lista de referencias
-vim.keymap.set('n', '<leader>ls', builtin.lsp_document_symbols, {}) -- ls - Lista de símbolos
+vim.keymap.set('n', '<leader>ld', builtin.diagnostics, { desc = '[L]SP [d]iagnostics' }) -- ld - Lista de avisos LSP
+vim.keymap.set('n', '<leader>lr', builtin.lsp_references, { desc = '[L]SP [r]eferences' }) -- ls - Lista de referencias
+vim.keymap.set('n', '<leader>ls', builtin.lsp_document_symbols, { desc = '[L]SP [s}ymbols' }) -- ls - Lista de símbolos
 
 -- Vim
-vim.keymap.set('n', '<leader>vc', builtin.commands, {}) -- vc - Lista de comandos de plugins disponibles
-vim.keymap.set('n', '<leader>vh', builtin.command_history, {}) -- vh - Histórico de comandos ejecutados
+vim.keymap.set('n', '<leader>vc', builtin.commands, { desc = '[V]iew plugin/user [c]ommands' }) -- vc - Lista de comandos de plugins disponibles
+vim.keymap.set('n', '<leader>vh', builtin.command_history, { desc = '[V]iew commands [h]istory' }) -- vh - Histórico de comandos ejecutados
+vim.keymap.set('n', '<leader>vk', builtin.keymaps, { desc = '[V]iew [k]eymaps' }) -- vk - Listado de atajos de teclado
 
 
 local actions = require('telescope.actions')
