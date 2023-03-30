@@ -17,6 +17,7 @@ configs.setup {
 	---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
 	-- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
 
+  -- Resaltado de sintaxis
 	highlight = {
 		enable = true,
 
@@ -40,7 +41,20 @@ configs.setup {
 		-- Instead of true it can also be a list of languages
 		additional_vim_regex_highlighting = true,
 	},
+
+  -- Indentación
   indent = { enable = true, disable = { "" } },
+
+  -- Selección incremental 
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = '<C-Space>', -- set to `false` to disable one of the mappings
+      node_incremental = '<C-Space>',
+      scope_incremental = '<C-s>',
+      node_decremental = '<S-Space>',
+    },
+  },
 
   -- nvim-ts-rainbow
   rainbow = {
@@ -51,6 +65,7 @@ configs.setup {
     -- colors = {}, -- table of hex strings
     -- termcolors = {} -- table of colour name strings
   },
+
   -- nvim-autopairs
   autopairs = {
     enable = true,
