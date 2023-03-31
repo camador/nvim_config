@@ -57,6 +57,7 @@ return packer.startup(function(use)
   use("lunarvim/colorschemes")
   use("folke/tokyonight.nvim")
   use("sainnhe/edge")
+  use("catppuccin/nvim")
 
   -- Autocompletado
   -- Tras añadir un plugin a esta lista (cmp plugins) hay que incluirlo
