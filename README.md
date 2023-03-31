@@ -234,16 +234,16 @@ sudo update-alternatives --config editor
 
 ##### Normal mode
 
-- `gcc`: Conmuta el comentario en la línea actual.
-- `gbc`: Conmuta el comentario en el bloque de la línea actual.
+- `gcc`: Conmuta el comentario de línea en la línea actual (`//`).
+- `gbc`: Conmuta el comentario de bloque de la línea actual (`/* */`).
 - `gco`: Inserta un comentario en la línea siguiente y entra en modo de inserción.
 - `gcO`: Inserta un comentario en la línea anterior y entra en modo de inserción.
 - `gcA`: Inserta un comentario al final de la línea actual y entra en modo de inserción.
 
 ##### Visual mode
 
-- `gc`: Conmuta el comentario en la selección. Comentario por línea.
-- `gb`: Conmuta el comentario en la selección. Comentario por bloque.
+- `gc`: Conmuta el comentario en la selección. Comentario de línea (`//`).
+- `gb`: Conmuta el comentario en la selección. Comentario de bloque (`/* */`).
 
 #### Autocompletando código
 
