@@ -4,7 +4,7 @@ if not null_ls_status_ok then
 end
 
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/code_actions
---local code_actions = null_ls.builtins.code_actions
+local code_actions = null_ls.builtins.code_actions
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/completion
 --local completion = null_ls.builtins.completion
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
@@ -32,9 +32,12 @@ null_ls.setup({
     formatting.rubocop,
     diagnostics.rubocop,
     formatting.erb_lint, -- https://github.com/Shopify/erb-lint
-    diagnostics.erb_lint,
 
-    --code_actions.gitsigns,
+    -- Rust
+    formatting.rustfmt,
+
+    -- Integración con Gitsigns 
+    code_actions.gitsigns,
 
     -- Significado de la palabra (en ingléss) en la que se encuentra el cursor (`K`)
     --hover.dictionary,
