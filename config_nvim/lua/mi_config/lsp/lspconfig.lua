@@ -12,8 +12,9 @@ lspconfig.lua_ls.setup {
   }
 }
 -- Servers: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-lspconfig.tsserver.setup {}
+lspconfig.rust_analyzer.setup {}
 lspconfig.solargraph.setup {}
+lspconfig.tsserver.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
