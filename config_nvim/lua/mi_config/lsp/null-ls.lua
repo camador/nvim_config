@@ -36,6 +36,9 @@ null_ls.setup({
     -- Rust
     formatting.rustfmt,
 
+    -- TOML
+    formatting.dprint,
+
     -- Integración con Gitsigns 
     code_actions.gitsigns,
 
