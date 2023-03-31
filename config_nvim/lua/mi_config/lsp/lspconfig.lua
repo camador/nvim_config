@@ -11,8 +11,9 @@ lspconfig.lua_ls.setup {
     }
   }
 }
-lspconfig.tsserver.setup {}
+lspconfig.rust_analyzer.setup {}
 lspconfig.solargraph.setup {}
+lspconfig.tsserver.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
