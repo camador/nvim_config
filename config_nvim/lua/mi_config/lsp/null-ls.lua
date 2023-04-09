@@ -30,7 +30,7 @@ null_ls.setup({
 
     -- Ruby
     formatting.rubocop,
-    diagnostics.rubocop,
+    -- diagnostics.rubocop,
     formatting.erb_lint, -- https://github.com/Shopify/erb-lint
 
     -- Rust
