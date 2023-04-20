@@ -14,6 +14,7 @@ lspconfig.lua_ls.setup {
 -- Servers: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 lspconfig.rust_analyzer.setup {}
 lspconfig.solargraph.setup {}
+lspconfig.tailwindcss.setup {} -- npm install @tailwindcss/language-server
 lspconfig.tsserver.setup {}
 
 -- Global mappings.
