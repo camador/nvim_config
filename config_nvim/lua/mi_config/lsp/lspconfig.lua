@@ -12,6 +12,10 @@ lspconfig.lua_ls.setup {
   }
 }
 -- Servers: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+lspconfig.cssls.setup {
+  capabilities = capabilities,
+} -- npm install vscode-langservers-extracted
 lspconfig.rust_analyzer.setup {}
 lspconfig.solargraph.setup {}
 lspconfig.tailwindcss.setup {} -- npm install @tailwindcss/language-server
