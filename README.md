@@ -14,6 +14,7 @@ Ficheros de configuración para linux.
       1. [Autocompletado de código](#autocompletado-de-código)
          1. [Snippets](#snippets)
       2. [LSP](#lsp)
+      3. [Copilot](#copilot)
    3. [Búsqueda difusa](#búsqueda-difusa)
    4. [Git](#git)
    5. [Interfaz y navegación](#interfaz-y-navegación)
@@ -39,6 +40,7 @@ Ficheros de configuración para linux.
    5. [Autocompletado](#autocompletado)
    6. [Configuración de LSP](#configuración-de-lsp)
       1. [Ficheros de configuración](#ficheros-de-configuración)
+   7. [Configuración de copilot.lua](#configuracion-de-copilotlua)
    7. [Configuración de telescope.nvim](#configuracion-de-telescope)
    8. [Configuración de nvim-treesitter](#configuracion-de-nvim-treesitter)
    9. [Configuración de nvim-autopairs](#configuracion-de-nvim-autopairs)
@@ -138,6 +140,11 @@ sudo update-alternatives --config editor
 - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim): Puente entre [mason.nvim](https://github.com/williamboman/mason.nvim) y [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig).
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp): Fuente para autocompletado LSP para [nvim-cmp](https://github.com/hrsh7th/nvim-cmp).
 - [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim): Formato y diagnóstico.
+
+### Copilot
+
+- [copilot.lua](https://github.com/zbirenbaum/copilot.lua): Integración de [Copilot](https://github.com/features/copilot) en Nvim.
+- [copilot-cmp](https://github.com/zbirenbaum/copilot-cmp): Copilot como fuente de [nvim-cmp](https://github.com/hrsh7th/nvim-cmp).
 
 ## Búsqueda difusa
 
@@ -409,6 +416,11 @@ Además, en [cmp.lua](config_nvim/lua/mi_config/cmp.lua) hay que añadir la fuen
 ```lua
 lspconfig.<nombre_del_servidor>.setup {}
 ```
+
+### Configuración de copilot.lua
+
+Fichero [~/.config/nvim/lua/mi_config/copilot.lua](config_nvim/lua/mi_config/copilot.lua): Configuración para la integración con [nvim-cmp](https://github.com/hrsh7th/nvim-cmp).
+Añadido Copilot en [cmp.lua](config_nvim/lua/mi_config/cmp.lua), apartados `formatting` y `sources`.
 
 ### Configuración de Telescope
 

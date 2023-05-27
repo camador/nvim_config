@@ -84,6 +84,24 @@ return packer.startup(function(use)
   use("neovim/nvim-lspconfig")            -- enable LSP
   use("jose-elias-alvarez/null-ls.nvim")  -- Formatting, linting, diagnostics, code actions
 
+  --- Copilot
+  --- Because the copilot server takes some time to start up, it is recommend that you lazy load copilot:
+  use {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({})
+    end,
+  }
+  use {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function ()
+      require("copilot_cmp").setup()
+    end
+  }
+
   -- Telescope - Fuzzy finder
   use({
     "nvim-telescope/telescope.nvim",
