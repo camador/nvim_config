@@ -119,6 +119,7 @@ sudo update-alternatives --config editor
 - [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring): Comentarios según el contexto usando [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
 - [vim-surround](https://github.com/tpope/vim-surround): Inserta y edita pares de tags, paréntesis, comillas, etc.
 - [vim-rails](https://github.com/tpope/vim-rails): Desarrollo de aplicaciones Rails.
+- [Sparkup](https://github.com/rstacruz/sparkup): Permite escribir HTML muy rápido.
 
 ### Autocompletado de código
 
@@ -247,6 +248,10 @@ sudo update-alternatives --config editor
 - `gcO`: Inserta un comentario en la línea anterior y entra en modo de inserción.
 - `gcA`: Inserta un comentario al final de la línea actual y entra en modo de inserción.
 
+#### Sparkup
+
+- `C-e`: Expande la cadena a tags HTML.
+
 ##### Visual mode
 
 - `gc`: Conmuta el comentario en la selección. Comentario de línea (`//`).
@@ -270,7 +275,7 @@ sudo update-alternatives --config editor
 
 ##### Buffers con LSP
 
-- `<leader>gD`: Ir a la declaración del símbolo sobre el que se encuentre el cursor.
+- `<leader>gd`: Ir a la declaración del símbolo sobre el que se encuentre el cursor.
 - `<leader>gD`: Ir a la definición del símbolo sobre el que se encuentre el cursor.
 - `K`: Muestra un popup con información sobre el símbolo sobre el que se encuentre el cursor.
 - `<leader>gi`: Muestra todas las implementaciones del símbolo sobre el que se encuentre el cursor en la ventana quickfix (`:cw`) de Neovim.

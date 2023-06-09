@@ -120,6 +120,7 @@ return packer.startup(function(use)
   use("JoosepAlviste/nvim-ts-context-commentstring")           -- Comentarios según el contexto
   use("tpope/vim-surround")                                    -- Inserta y edita pares de tags, paréntesis, comillas, etc.
   use("tpope/vim-rails")                                       -- Desarrollo de aplicaciones Rails.
+  use("rstacruz/sparkup")                                      -- Permite escribir HTML muy rápido
 
   -- Git
   use("lewis6991/gitsigns.nvim") -- Indicadores visuales para los cambios de Git
