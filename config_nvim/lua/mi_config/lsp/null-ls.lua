@@ -25,8 +25,8 @@ null_ls.setup({
     formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
 
     -- Python
-    formatting.black.with({ extra_args = { "--fast" } }),
-    diagnostics.flake8,
+    --formatting.black.with({ extra_args = { "--fast" } }),
+    --diagnostics.flake8,
 
     -- Ruby
     formatting.rubocop,
