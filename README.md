@@ -416,7 +416,7 @@ Los scripts de configuración de LSP están contenidos en el directorio [~/.conf
 
 Además, en [cmp.lua](config_nvim/lua/mi_config/cmp.lua) hay que añadir la fuente (`cmp-nvim-lsp`) en los apartados `formatting` y `sources`.
 
-[mason-lspconfig.lua](config_nvim/lua/mi_config/lsp/mason-lspconfig.lua) instala automáticamente `lua_ls` (para Lua), `tsserver` (para JavaScript) y `solargraph` (para Ruby, solo soporte de Rubocop). Los servidores instalados manualmente con `mason` deben ser añadidos al fichero [lspconfig.lua](config_nvim/lua/mi_config/lsp/lspconfig.lua):
+[mason-lspconfig.lua](config_nvim/lua/mi_config/lsp/mason-lspconfig.lua) instala automáticamente `lua_ls` (para Lua), `tsserver` (para JavaScript), `solargraph` (para Ruby, solo soporte de Rubocop) y `pyright` y `black` (para Python). Los servidores instalados manualmente con `mason` deben ser añadidos al fichero [lspconfig.lua](config_nvim/lua/mi_config/lsp/lspconfig.lua):
 
 ```lua
 lspconfig.<nombre_del_servidor>.setup {}
