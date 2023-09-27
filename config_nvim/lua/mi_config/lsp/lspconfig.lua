@@ -16,6 +16,9 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protoc
 lspconfig.cssls.setup {
   capabilities = capabilities,
 } -- npm install vscode-langservers-extracted
+lspconfig.html.setup {
+  capabilities = capabilities,
+}
 lspconfig.pyright.setup {}
 lspconfig.rust_analyzer.setup {}
 lspconfig.solargraph.setup {}
