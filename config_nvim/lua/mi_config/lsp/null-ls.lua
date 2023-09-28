@@ -28,6 +28,10 @@ null_ls.setup({
     formatting.black.with({ extra_args = { "--fast" } }),
     --diagnostics.flake8,
 
+    -- Django
+    diagnostics.djlint,
+    formatting.djlint,
+
     -- Ruby
     formatting.rubocop,
     -- diagnostics.rubocop,
