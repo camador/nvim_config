@@ -113,7 +113,7 @@ sudo update-alternatives --config editor
 ## Ayudas para el código
 
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): Mejora el coloreado del código y permite auto indentado.
-- [nvim-ts-rainbow](https://github.com/p00f/nvim-ts-rainbow): Muestra cada par de paréntesis de un color distinto.
+- [rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim): Muestra cada par de paréntesis de un color distinto.
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs): Cierra automática los pares de paréntisis, comillas, etc. Se integra con [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) y [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim): Facilita el comentado de código.
 - [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring): Comentarios según el contexto usando [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
@@ -433,7 +433,7 @@ Fichero [~/.config/nvim/lua/mi_config/telescope.lua](config_nvim/lua/mi_config/t
 
 ### Configuración de nvim-treesitter
 
-Fichero [~/.config/nvim/lua/mi_config/treesitter.lua](config_nvim/lua/mi_config/treesitte.lua): Fuerza la instalación de todos los parsers, activa la indentación y configura [nvim-ts-rainbow](https://github.com/p00f/nvim-ts-rainbow).
+Fichero [~/.config/nvim/lua/mi_config/treesitter.lua](config_nvim/lua/mi_config/treesitte.lua): Fuerza la instalación de todos los parsers, activa la indentación y configura [rainbow-delimiters](https://github.com/HiPhish/rainbow-delimiters.nvim).
 
 ### Configuración de nvim-autopairs
 

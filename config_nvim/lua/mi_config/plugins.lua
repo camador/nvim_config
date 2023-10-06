@@ -114,7 +114,7 @@ return packer.startup(function(use)
 
   -- Ayudas para el código
   use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" }) -- Parser, syntax highlinthing
-  use("p00f/nvim-ts-rainbow")                                  -- Rainbow parentheses. NO LONGER MAINTENED
+  use("HiPhish/rainbow-delimiters.nvim")                       -- Rainbow parentheses
   use("windwp/nvim-autopairs")                                 -- Autopairs, integrates with both cmp and treesitter
   use("numToStr/Comment.nvim")                                 -- Comentarios
   use("JoosepAlviste/nvim-ts-context-commentstring")           -- Comentarios según el contexto
