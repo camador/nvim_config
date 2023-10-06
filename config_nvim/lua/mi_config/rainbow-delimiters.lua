@@ -3,14 +3,17 @@ if not status_ok then
   return
 end
 
-rainbow_delimiters.setup({
+-- This module contains a number of default definitions
+-- local rainbow_delimiters = require("rainbow-delimiters")
+
+vim.g.rainbow_delimiters = {
   strategy = {
     [""] = rainbow_delimiters.strategy["global"],
     commonlisp = rainbow_delimiters.strategy["local"],
   },
   query = {
     [""] = "rainbow-delimiters",
-    latex = "rainbow-blocks",
+    lua = "rainbow-blocks",
   },
   highlight = {
     "RainbowDelimiterRed",
@@ -22,4 +25,4 @@ rainbow_delimiters.setup({
     "RainbowDelimiterCyan",
   },
   blacklist = { "c", "cpp" },
-})
+}
