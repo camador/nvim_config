@@ -16,6 +16,8 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protoc
 lspconfig.cssls.setup {
   capabilities = capabilities,
 } -- npm install vscode-langservers-extracted
+lspconfig.dockerls.setup {}
+lspconfig.docker_compose_language_service.setup {}
 lspconfig.html.setup {
   capabilities = capabilities,
 }
