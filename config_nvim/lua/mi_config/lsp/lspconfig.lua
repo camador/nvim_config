@@ -17,7 +17,18 @@ lspconfig.cssls.setup {
   capabilities = capabilities,
 } -- npm install vscode-langservers-extracted
 lspconfig.dockerls.setup {}
-lspconfig.docker_compose_language_service.setup {}
+lspconfig.docker_compose_language_service.setup {
+  vim.api.nvim_exec([[
+    autocmd BufRead,BufNewFile compose.yml set filetype=yaml.docker-compose
+    autocmd BufRead,BufNewFile compose.yaml set filetype=yaml.docker-compose
+    autocmd BufRead,BufNewFile compose.override.yml set filetype=yaml.docker-compose
+    autocmd BufRead,BufNewFile compose.override.yaml set filetype=yaml.docker-compose
+    autocmd BufRead,BufNewFile docker-compose.yml set filetype=yaml.docker-compose
+    autocmd BufRead,BufNewFile docker-compose.yaml set filetype=yaml.docker-compose
+    autocmd BufRead,BufNewFile docker-compose.override.yml set filetype=yaml.docker-compose
+    autocmd BufRead,BufNewFile docker-compose.override.yaml set filetype=yaml.docker-compose
+  ]], false)
+}
 lspconfig.html.setup {
   capabilities = capabilities,
 }
