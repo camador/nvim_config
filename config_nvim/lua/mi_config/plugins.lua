@@ -82,7 +82,8 @@ return packer.startup(function(use)
   })
   use("williamboman/mason-lspconfig.nvim") -- bridge between lspconfig and mason
   use("neovim/nvim-lspconfig")            -- enable LSP
-  use("jose-elias-alvarez/null-ls.nvim")  -- Formatting, linting, diagnostics, code actions
+  --use("jose-elias-alvarez/null-ls.nvim")  -- Formatting, linting, diagnostics, code actions (ARCHIVADO)
+  use("nvimtools/none-ls.nvim")  -- Formatting, linting, diagnostics, code actions
 
   --- Copilot
   --- Because the copilot server takes some time to start up, it is recommend that you lazy load copilot:

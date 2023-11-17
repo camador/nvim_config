@@ -140,7 +140,7 @@ sudo update-alternatives --config editor
 - [mason.nvim](https://github.com/williamboman/mason.nvim): Gestor de servidores LSP.
 - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim): Puente entre [mason.nvim](https://github.com/williamboman/mason.nvim) y [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig).
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp): Fuente para autocompletado LSP para [nvim-cmp](https://github.com/hrsh7th/nvim-cmp).
-- [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim): Formato y diagnóstico.
+- [none-ls.nvim](https://github.com/nvimtools/none-ls.nvim): Formato y diagnóstico.
 
 ### Copilot
 
@@ -225,7 +225,7 @@ sudo update-alternatives --config editor
 
 ### Ayudas del código
 
-#### nvim-treesitter 
+#### nvim-treesitter
 
 ##### Selección incremental
 
@@ -412,7 +412,7 @@ Los scripts de configuración de LSP están contenidos en el directorio [~/.conf
 - [mason.lua](config_nvim/lua/mi_config/lsp/mason.lua): [Inicializa](https://github.com/williamboman/mason.nvim#setup) `mason`.
 - [mason-lspconfig.lua](config_nvim/lua/mi_config/lsp/mason-lspconfig.lua): [Inicializa](https://github.com/williamboman/mason-lspconfig.nvim#configuration) `mason-lspconfig`.
 - [lspconfig.lua](config_nvim/lua/mi_config/lsp/lspconfig.lua): Inicializa los servidores instalados por `mason` y establece la configuración general de `nvim-lspconfig` (keymaps, visualización,... ). Ver [Quickstart](https://github.com/neovim/nvim-lspconfig#quickstart) de `nvim-lspconfig`.
-- [null-ls.lua](config_nvim/lua/mi_config/lsp/null-ls.lua): Habilita el formateo y diagnóstico para los distitntos lenguajes. Cada lenguaje necesita la instalación del correspondiente binario (`:NullLsInfo` en un buffer para ver las opciones disponibles en el apartado _Supported Source(s)_).
+- [none-ls.lua](config_nvim/lua/mi_config/lsp/none-ls.lua): Habilita el formateo y diagnóstico para los distitntos lenguajes. Cada lenguaje necesita la instalación del correspondiente binario (`:NullLsInfo` en un buffer para ver las opciones disponibles en el apartado _Supported Source(s)_).
 
 Además, en [cmp.lua](config_nvim/lua/mi_config/cmp.lua) hay que añadir la fuente (`cmp-nvim-lsp`) en los apartados `formatting` y `sources`.
 

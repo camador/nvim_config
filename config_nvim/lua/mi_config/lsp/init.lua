@@ -19,4 +19,4 @@ end
 require("mi_config.lsp.mason")
 require("mi_config.lsp.mason-lspconfig")
 require("mi_config.lsp.lspconfig")
-require("mi_config.lsp.null-ls")
+require("mi_config.lsp.none-ls")
