@@ -33,8 +33,6 @@ function custom_fname:update_status()
   return data
 end
 
-
-
 local diagnostics = {
 	"diagnostics",
 	sources = { "nvim_diagnostic" },
@@ -86,8 +84,40 @@ local progress = function()
 	return chars[index]
 end
 
+-- Número de espacios para tabulación
 local spaces = function()
 	return "Espacios: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
+end
+
+-- Indicador de espacios en blanco al final línea
+local trailing_whitespaces = function()
+  local space = vim.fn.search([[\s\+$]], 'nwc')
+  return space ~= 0 and "TW:"..space or ""
+end
+
+-- Indicador de indentación mixta (espacios/tabs)
+local mixed_indent = function()
+  local space_pat = [[\v^ +]]
+  local tab_pat = [[\v^\t+]]
+  local space_indent = vim.fn.search(space_pat, 'nwc')
+  local tab_indent = vim.fn.search(tab_pat, 'nwc')
+  local mixed = (space_indent > 0 and tab_indent > 0)
+  local mixed_same_line
+  if not mixed then
+    mixed_same_line = vim.fn.search([[\v^(\t+ | +\t)]], 'nwc')
+    mixed = mixed_same_line > 0
+  end
+  if not mixed then return '' end
+  if mixed_same_line ~= nil and mixed_same_line > 0 then
+     return 'MI:'..mixed_same_line
+  end
+  local space_indent_cnt = vim.fn.searchcount({pattern=space_pat, max_count=1e3}).total
+  local tab_indent_cnt =  vim.fn.searchcount({pattern=tab_pat, max_count=1e3}).total
+  if space_indent_cnt > tab_indent_cnt then
+    return 'MI:'..tab_indent
+  else
+    return 'MI:'..space_indent
+  end
 end
 
 lualine.setup({
@@ -113,7 +143,7 @@ lualine.setup({
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_x = { diff, spaces, "encoding", filetype },
 		lualine_y = { location },
-		lualine_z = { progress },
+		lualine_z = { trailing_whitespaces, mixed_indent, progress },
 	},
 	inactive_sections = {
 		lualine_a = {},
