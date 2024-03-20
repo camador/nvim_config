@@ -29,6 +29,7 @@ lspconfig.docker_compose_language_service.setup {
     autocmd BufRead,BufNewFile docker-compose.override.yaml set filetype=yaml.docker-compose
   ]], false)
 }
+lspconfig.dprint.setup {} -- https://github.com/nvimtools/none-ls.nvim/issues/58
 lspconfig.html.setup {
   capabilities = capabilities,
 }

@@ -38,10 +38,10 @@ null_ls.setup({
     formatting.erb_lint, -- https://github.com/Shopify/erb-lint
 
     -- Rust
-    formatting.rustfmt,
+    -- formatting.rustfmt, -- Deprecated: https://github.com/nvimtools/none-ls.nvim/issues/58
 
     -- TOML
-    formatting.dprint,
+    -- formatting.dprint, -- Deprecated: https://github.com/nvimtools/none-ls.nvim/issues/58
 
     -- Integración con Gitsigns 
     code_actions.gitsigns,
