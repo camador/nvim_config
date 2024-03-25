@@ -36,6 +36,8 @@ null_ls.setup({
     formatting.rubocop,
     -- diagnostics.rubocop,
     formatting.erb_lint, -- https://github.com/Shopify/erb-lint
+    diagnostics.erb_lint, -- https://github.com/Shopify/erb-lint
+    formatting.htmlbeautifier, -- https://github.com/threedaymonk/htmlbeautifier
 
     -- Rust
     -- formatting.rustfmt, -- Deprecated: https://github.com/nvimtools/none-ls.nvim/issues/58
