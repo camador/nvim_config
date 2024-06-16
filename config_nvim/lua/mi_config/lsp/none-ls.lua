@@ -17,12 +17,18 @@ local formatting = null_ls.builtins.formatting
 null_ls.setup({
   debug = false,
   sources = {
-    -- Lua
-    formatting.stylua, -- https://github.com/JohnnyMorganz/StyLua
+    -- Java
+    diagnostics.checkstyle.with({
+      extra_args = { "-c", "/google_checks.xml" }
+    }), -- https://github.com/checkstyle/checkstyle
+    formatting.google_java_format,
 
     -- Javascript, HTML, CSS/SCSS, Markdown, YAML, JSON...
     -- https://prettier.io/
     formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
+
+    -- Lua
+    formatting.stylua, -- https://github.com/JohnnyMorganz/StyLua
 
     -- Python
     formatting.black.with({ extra_args = { "--fast" } }),
@@ -45,7 +51,7 @@ null_ls.setup({
     -- TOML
     -- formatting.dprint, -- Deprecated: https://github.com/nvimtools/none-ls.nvim/issues/58
 
-    -- Integración con Gitsigns 
+    -- Integración con Gitsigns
     code_actions.gitsigns,
 
     -- Significado de la palabra (en ingléss) en la que se encuentra el cursor (`K`)
