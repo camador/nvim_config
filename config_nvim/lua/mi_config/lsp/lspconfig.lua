@@ -33,6 +33,7 @@ lspconfig.dprint.setup {} -- https://github.com/nvimtools/none-ls.nvim/issues/58
 lspconfig.html.setup {
   capabilities = capabilities,
 }
+lspconfig.jdtls.setup({}) -- https://github.com/nvim-java/nvim-java
 lspconfig.pyright.setup {}
 lspconfig.rust_analyzer.setup {}
 lspconfig.solargraph.setup {}

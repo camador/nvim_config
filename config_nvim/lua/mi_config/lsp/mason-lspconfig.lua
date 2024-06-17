@@ -4,6 +4,7 @@ require("mason-lspconfig").setup({
     "dockerls",
     "dprint",
     "html",
+    "jdtls",
     "lua_ls",
     "pyright",
     "rust_analyzer",

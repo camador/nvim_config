@@ -141,6 +141,7 @@ sudo update-alternatives --config editor
 - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim): Puente entre [mason.nvim](https://github.com/williamboman/mason.nvim) y [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig).
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp): Fuente para autocompletado LSP para [nvim-cmp](https://github.com/hrsh7th/nvim-cmp).
 - [none-ls.nvim](https://github.com/nvimtools/none-ls.nvim): Formato y diagnóstico.
+- [nvim-java](https://github.com/nvim-java/nvim-java): Desarrollo en Java. Entre otras herramientas usa [nvm-jdtls](https://github.com/mfussenegger/nvim-jdtls).
 
 ### Copilot
 
@@ -413,6 +414,7 @@ Los scripts de configuración de LSP están contenidos en el directorio [~/.conf
 - [mason-lspconfig.lua](config_nvim/lua/mi_config/lsp/mason-lspconfig.lua): [Inicializa](https://github.com/williamboman/mason-lspconfig.nvim#configuration) `mason-lspconfig`.
 - [lspconfig.lua](config_nvim/lua/mi_config/lsp/lspconfig.lua): Inicializa los servidores instalados por `mason` y establece la configuración general de `nvim-lspconfig` (keymaps, visualización,... ). Ver [Quickstart](https://github.com/neovim/nvim-lspconfig#quickstart) de `nvim-lspconfig`.
 - [none-ls.lua](config_nvim/lua/mi_config/lsp/none-ls.lua): Habilita el formateo y diagnóstico para los distitntos lenguajes. Cada lenguaje necesita la instalación del correspondiente binario (`:NullLsInfo` en un buffer para ver las opciones disponibles en el apartado _Supported Source(s)_).
+- [nvim-java.lua](config_nvim/lua/mi_config/lsp/nvim-java.lua): Configura [nvim-java](https://github.com/nvim-java/nvim-java).
 
 Además, en [cmp.lua](config_nvim/lua/mi_config/cmp.lua) hay que añadir la fuente (`cmp-nvim-lsp`) en los apartados `formatting` y `sources`.
 
@@ -421,6 +423,8 @@ Además, en [cmp.lua](config_nvim/lua/mi_config/cmp.lua) hay que añadir la fuen
 ```lua
 lspconfig.<nombre_del_servidor>.setup {}
 ```
+
+[nvim-java](https://github.com/nvim-java/nvim-java) usa [nvim-jdtls](https://github.com/mfussenegger/nvim-jdtls), que necesita JDK 17 o superior: `sudo apt install openjdk-21-jdk`
 
 ### Configuración de copilot.lua
 
