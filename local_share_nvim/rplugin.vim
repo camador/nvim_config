@@ -10,6 +10,3 @@
 " ruby plugins
 
 
-" python plugins
-
-
