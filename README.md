@@ -66,7 +66,7 @@ sudo apt install xclip fonts-firacode git ripgrep fd-find tar curl
 
 - `xclip` es necesario para que funcione el portapapeles.
 - `fonts-firacode` es el tipo de letra usado (definido en [~/.config/nvim/lua/mi_config/options.lua](config_nvim/lua/mi_config/options.lua)).
-- `git` es necesario para [packer.nvim](https://github.com/wbthomason/packer.nvim) y opcional para [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
+- `git` es necesario para [lazy.nvim](https://github.com/folke/lazy.nvim) y opcional para [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
 - `ripgrep` es necesario para que el [live_grep](https://github.com/nvim-telescope/telescope.nvim#file-pickers) (`<leader>fs`) de [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim).
 - `fd-find` es una [alternativa a find](https://github.com/sharkdp/fd) recomendada por [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim#optional-dependencies).
 - `tar` es necesario para [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
@@ -82,7 +82,7 @@ cp -r ~/desarrollo/nvim_config/fonts ~/.local/share
 En Neovim, instalar/actualizar los plugins:
 
 ```
-:PackerSync
+:Lazy sync
 ```
 
 Reiniciar Neovim.
@@ -100,7 +100,7 @@ sudo update-alternatives --config editor
 <details>
 <summary>Ver lista de Plugins instalados</summary>
 
-- [packer.nvim](https://github.com/wbthomason/packer.nvim): Gestor de plugins.
+- [lazy.nvim](https://github.com/folke/lazy.nvim): Gestor de plugins.
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim): Librería lua necesaria para varios plugins.
 - [popup.nvim](https://github.com/nvim-lua/popup.nvim): Popup API de Vim en Neovim.
 
@@ -383,7 +383,7 @@ Algunos plugins tienen sus propios atajos de teclado definidos en sus ficheros d
 
 ### Gestión de plugins
 
-Fichero [~/.config/nvim/lua/mi_config/plugins.lua](config_nvim/lua/mi_config/plugins.lua): Instalación automática de ([packer.nvim](https://github.com/wbthomason/packer.nvim)) y resto de plugins.
+Fichero [~/.config/nvim/lua/mi_config/plugins.lua](config_nvim/lua/mi_config/plugins.lua): Instalación automática de ([lazy.nvim](https://github.com/folke/lazy.nvim)) y resto de plugins.
 
 ### Esquema de colores
 
@@ -391,7 +391,7 @@ Fichero [~/.config/nvim/lua/mi_config/colorscheme.lua](config_nvim/lua/mi_config
 
 ### Autocompletado
 
-Fichero [~/.config/nvim/lua/mi_config/cmp.lua](config_nvim/lua/mi_config/cmp.lua): Define las fuentas de autocompletado usadas por [nvim-cmp](https://github.com/hrsh7th/nvim-cmp). Tras instalar una [fuente](https://github.com/hrsh7th/nvim-cmp/wiki/List-of-sources) como plugin en Packer hay que añadirla en este fichero en los apartados `formatting` y `sources` usando el nombre definido en la documentación de dicha fuente.
+Fichero [~/.config/nvim/lua/mi_config/cmp.lua](config_nvim/lua/mi_config/cmp.lua): Define las fuentas de autocompletado usadas por [nvim-cmp](https://github.com/hrsh7th/nvim-cmp). Tras instalar una [fuente](https://github.com/hrsh7th/nvim-cmp/wiki/List-of-sources) como plugin en Lazy hay que añadirla en este fichero en los apartados `formatting` y `sources` usando el nombre definido en la documentación de dicha fuente.
 
 La [fuente para snippets](https://github.com/saadparwaiz1/cmp_luasnip) necesita de los plugins adicionales descritos en el apartado [Plugins/Snippets](#snippets).
 
