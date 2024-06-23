@@ -16,6 +16,7 @@ if not mason_lspconfig_status_ok then
 end
 --
 -- IMPORTANTE: No modificar el orden de inicialización de los plugins
+require("mi_config.lsp.nvim-java")
 require("mi_config.lsp.mason")
 require("mi_config.lsp.mason-lspconfig")
 require("mi_config.lsp.lspconfig")
