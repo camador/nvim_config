@@ -16,6 +16,28 @@ require('lazy').setup({
   -- My plugins here
   --
 
+  -- https://github.com/vhyrro/luarocks.nvim
+  {
+    "vhyrro/luarocks.nvim",
+    priority = 1000, -- Very high priority is required, luarocks.nvim should run as the first plugin in your config.
+    config = true,
+    -- Hacer :Lazy build luarocks.nvim para forzar la configuración
+  },
+  {
+    -- Hacer :Lazy build neorg para forzar la configuración
+    "nvim-neorg/neorg",
+    opts = {},
+    dependencies = { "luarocks.nvim" },
+    lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+    version = "*", -- Pin Neorg to the latest stable release
+    config = true,
+    -- config = function()
+    --         require("neorg").setup({
+    --           -- put any of your previous config here
+    --         })
+    --     end,
+  },
+
   -- An implementation of the Popup API from vim in Neovim
   "nvim-lua/popup.nvim",
 
@@ -41,7 +63,12 @@ require('lazy').setup({
   "hrsh7th/cmp-nvim-lsp",     -- LSP completions
 
   -- snippets
-  "L3MON4D3/LuaSnip",             --snippet engine
+  {
+    "L3MON4D3/LuaSnip",
+    build = "make install_jsregexp",
+    -- :checkhelp luasnip, si dice que no está instalado ir
+    -- a ~/.local/share/nvim/lazy/LuaSnip y ejecutar make install_jsregexp
+  }, --snippet engine
   "rafamadriz/friendly-snippets", -- a bunch of snippets to use
 
   --
@@ -67,17 +94,22 @@ require('lazy').setup({
             'github:nvim-java/mason-registry',
             'github:mason-org/mason-registry',
           },
+        build = ":MasonUpdate", -- :MasonUpdate updates registry contents
         },
       }
     },
   },
 
-  {
-    "williamboman/mason.nvim",    -- simple to use language server installer
-    build = ":MasonUpdate",       -- :MasonUpdate updates registry contents
-  },
+  -- Ya incluido con nvim-java. Descomentar si se elimina ese plugin
+  -- {
+  --   "williamboman/mason.nvim",    -- simple to use language server installer
+  --   build = ":MasonUpdate",       -- :MasonUpdate updates registry contents
+  -- },
   "williamboman/mason-lspconfig.nvim", -- bridge between lspconfig and mason
-  "neovim/nvim-lspconfig",             -- enable LSP
+
+  -- Ya incluido con nvim-java. Descomentar si se elimina ese plugin
+  --"neovim/nvim-lspconfig",             -- enable LSP
+
   --"jose-elias-alvarez/null-ls.nvim",  -- Formatting, linting, diagnostics, code actions (ARCHIVADO)
   "nvimtools/none-ls.nvim",  -- Formatting, linting, diagnostics, code actions
 
@@ -116,7 +148,7 @@ require('lazy').setup({
   -- Ayudas para el código
   {
     "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate"
+    build = ":TSUpdate" -- Actualiza parsers cada vez que se inicia NVim
   }, -- Parser, syntax highlinthing
   "HiPhish/rainbow-delimiters.nvim",              -- Rainbow parentheses
   "windwp/nvim-autopairs",                        -- Autopairs, integrates with both cmp and treesitter

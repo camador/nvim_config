@@ -1,0 +1,32 @@
+rock_manifest = {
+   doc = {
+      ["PathlibPath.rst"] = "ebb862ce97fba94bea421e572574e605",
+      ["PathlibPosixPath.rst"] = "2fe39ae30f11dbb5abf0e39c0126b44f",
+      ["PathlibWindowsPath.rst"] = "3e30195b2c4ba95418f79c4ff920a919",
+      ["pathlib.nvim.txt"] = "a3b21b247c9b8e941fa1302f774d9339"
+   },
+   lua = {
+      pathlib = {
+         ["base.lua"] = "56bf6b4b2d203fe443f10461bf7b2946",
+         ["const.lua"] = "055db7213f498920e9b1e6fa89714d69",
+         ["git.lua"] = "b39feb2931a2553318126480a814077a",
+         ["init.lua"] = "0c508a501f111db9dc165dac744da738",
+         ["posix.lua"] = "1e397376465f2ebf744f80b7c7ae9812",
+         utils = {
+            ["debug.lua"] = "3317abd659ee45a5888e9dd023cb42a4",
+            ["errors.lua"] = "154a178fa2d98ae8343f3cf7cb5f8b88",
+            ["init.lua"] = "dc3f0f7733f8e3af06b6d220c960c994",
+            ["lists.lua"] = "61d57448ec4d2b260a9c1cf6cfdfece2",
+            ["nuv.lua"] = "4cd50e7d1dc4b7786658ab9aa20ea45b",
+            ["paths.lua"] = "4b20bc8fb7e8c4f1ff4face3fe1d7e72",
+            ["scheduler.lua"] = "0e3371bfc90dd1c48d382595139d9487",
+            ["tables.lua"] = "fb167127dacab7887e2ac06d2c3147c3",
+            ["uri.lua"] = "565eeea473f3906f1c75b892d9f0d78e",
+            ["watcher.lua"] = "eb4a2b2f4baee45a6a469b7a0018a318",
+            ["winapi_subset.lua"] = "a8e672b78bd045d12f9106c8b252138d"
+         },
+         ["windows.lua"] = "53006fd85a652c593bf14f1bf039f978"
+      }
+   },
+   ["pathlib.nvim-2.2.2-1.rockspec"] = "bd19de7bcf799b49327bd1865aefe7e4"
+}

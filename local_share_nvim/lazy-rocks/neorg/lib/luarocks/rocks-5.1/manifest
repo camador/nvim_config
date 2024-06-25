@@ -1,0 +1,581 @@
+commands = {}
+dependencies = {
+   ["lua-utils.nvim"] = {
+      ["1.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   neorg = {
+      ["scm-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "nvim-nio"
+         },
+         {
+            constraints = {},
+            name = "lua-utils.nvim"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     2, 2, string = "2.2"
+                  }
+               }
+            },
+            name = "pathlib.nvim"
+         }
+      }
+   },
+   ["nvim-nio"] = {
+      ["1.9.4-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["pathlib.nvim"] = {
+      ["2.2.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 8, 0, string = "1.8.0"
+                  }
+               }
+            },
+            name = "nvim-nio"
+         }
+      }
+   },
+   ["tree-sitter-norg"] = {
+      ["0.2.4-1"] = {}
+   },
+   ["tree-sitter-norg-meta"] = {
+      ["0.1.0-1"] = {}
+   }
+}
+modules = {
+   ["lua-utils.init"] = {
+      "lua-utils.nvim/1.0.2-1"
+   },
+   ["neorg.core.callbacks"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.core.config"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.core.init"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.core.log"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.core.modules"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.core.utils"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.external.log"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.health"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.init"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.autocommands.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.clipboard.code-blocks.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.clipboard.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.completion.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.concealer.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.concealer.preset_basic"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.concealer.preset_diamond"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.concealer.preset_varied"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.defaults.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.dirman.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.dirman.utils.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.esupports.hop.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.esupports.indent.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.esupports.metagen.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.export.markdown.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.export.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.fs.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.highlights.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.integrations.coq_nvim.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.integrations.image.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.integrations.nvim-cmp.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.integrations.nvim-compe.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.integrations.otter.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.integrations.treesitter.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.integrations.treesitter.tests"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.integrations.truezen.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.integrations.zen_mode.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.itero.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.journal.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.keybinds.keybinds"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.keybinds.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.latex.renderer.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.links.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.looking-glass.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.mode.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.neorgcmd.commands.return.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.neorgcmd.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.pivot.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.presenter.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.promo.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.qol.toc.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.qol.todo_items.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.queries.native.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.scanner.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.storage.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.summary.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.syntax.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.tangle.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.tempus.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.text-objects.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.todo-introspector.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.ui.calendar.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.ui.calendar.views.monthly"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.ui.module"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.ui.selection_popup"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.ui.text_popup"] = {
+      "neorg/scm-1"
+   },
+   ["neorg.modules.core.upgrade.module"] = {
+      "neorg/scm-1"
+   },
+   ["nio.control"] = {
+      "nvim-nio/1.9.4-1"
+   },
+   ["nio.curl"] = {
+      "nvim-nio/1.9.4-1"
+   },
+   ["nio.file"] = {
+      "nvim-nio/1.9.4-1"
+   },
+   ["nio.init"] = {
+      "nvim-nio/1.9.4-1"
+   },
+   ["nio.logger"] = {
+      "nvim-nio/1.9.4-1"
+   },
+   ["nio.lsp"] = {
+      "nvim-nio/1.9.4-1"
+   },
+   ["nio.lsp-types"] = {
+      "nvim-nio/1.9.4-1"
+   },
+   ["nio.process"] = {
+      "nvim-nio/1.9.4-1"
+   },
+   ["nio.streams"] = {
+      "nvim-nio/1.9.4-1"
+   },
+   ["nio.tasks"] = {
+      "nvim-nio/1.9.4-1"
+   },
+   ["nio.tests"] = {
+      "nvim-nio/1.9.4-1"
+   },
+   ["nio.ui"] = {
+      "nvim-nio/1.9.4-1"
+   },
+   ["nio.util"] = {
+      "nvim-nio/1.9.4-1"
+   },
+   ["nio.uv"] = {
+      "nvim-nio/1.9.4-1"
+   },
+   ["parser.norg"] = {
+      "tree-sitter-norg/0.2.4-1"
+   },
+   ["parser.norg_meta"] = {
+      "tree-sitter-norg-meta/0.1.0-1"
+   },
+   ["pathlib.base"] = {
+      "pathlib.nvim/2.2.2-1"
+   },
+   ["pathlib.const"] = {
+      "pathlib.nvim/2.2.2-1"
+   },
+   ["pathlib.git"] = {
+      "pathlib.nvim/2.2.2-1"
+   },
+   ["pathlib.init"] = {
+      "pathlib.nvim/2.2.2-1"
+   },
+   ["pathlib.posix"] = {
+      "pathlib.nvim/2.2.2-1"
+   },
+   ["pathlib.utils.debug"] = {
+      "pathlib.nvim/2.2.2-1"
+   },
+   ["pathlib.utils.errors"] = {
+      "pathlib.nvim/2.2.2-1"
+   },
+   ["pathlib.utils.init"] = {
+      "pathlib.nvim/2.2.2-1"
+   },
+   ["pathlib.utils.lists"] = {
+      "pathlib.nvim/2.2.2-1"
+   },
+   ["pathlib.utils.nuv"] = {
+      "pathlib.nvim/2.2.2-1"
+   },
+   ["pathlib.utils.paths"] = {
+      "pathlib.nvim/2.2.2-1"
+   },
+   ["pathlib.utils.scheduler"] = {
+      "pathlib.nvim/2.2.2-1"
+   },
+   ["pathlib.utils.tables"] = {
+      "pathlib.nvim/2.2.2-1"
+   },
+   ["pathlib.utils.uri"] = {
+      "pathlib.nvim/2.2.2-1"
+   },
+   ["pathlib.utils.watcher"] = {
+      "pathlib.nvim/2.2.2-1"
+   },
+   ["pathlib.utils.winapi_subset"] = {
+      "pathlib.nvim/2.2.2-1"
+   },
+   ["pathlib.windows"] = {
+      "pathlib.nvim/2.2.2-1"
+   }
+}
+repository = {
+   ["lua-utils.nvim"] = {
+      ["1.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["lua-utils.init"] = "lua-utils/init.lua"
+            }
+         }
+      }
+   },
+   neorg = {
+      ["scm-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-utils.nvim"] = "1.0.2-1",
+               ["nvim-nio"] = "1.9.4-1",
+               ["pathlib.nvim"] = "2.2.2-1"
+            },
+            modules = {
+               ["neorg.core.callbacks"] = "neorg/core/callbacks.lua",
+               ["neorg.core.config"] = "neorg/core/config.lua",
+               ["neorg.core.init"] = "neorg/core/init.lua",
+               ["neorg.core.log"] = "neorg/core/log.lua",
+               ["neorg.core.modules"] = "neorg/core/modules.lua",
+               ["neorg.core.utils"] = "neorg/core/utils.lua",
+               ["neorg.external.log"] = "neorg/external/log.lua",
+               ["neorg.health"] = "neorg/health.lua",
+               ["neorg.init"] = "neorg/init.lua",
+               ["neorg.modules.core.autocommands.module"] = "neorg/modules/core/autocommands/module.lua",
+               ["neorg.modules.core.clipboard.code-blocks.module"] = "neorg/modules/core/clipboard/code-blocks/module.lua",
+               ["neorg.modules.core.clipboard.module"] = "neorg/modules/core/clipboard/module.lua",
+               ["neorg.modules.core.completion.module"] = "neorg/modules/core/completion/module.lua",
+               ["neorg.modules.core.concealer.module"] = "neorg/modules/core/concealer/module.lua",
+               ["neorg.modules.core.concealer.preset_basic"] = "neorg/modules/core/concealer/preset_basic.lua",
+               ["neorg.modules.core.concealer.preset_diamond"] = "neorg/modules/core/concealer/preset_diamond.lua",
+               ["neorg.modules.core.concealer.preset_varied"] = "neorg/modules/core/concealer/preset_varied.lua",
+               ["neorg.modules.core.defaults.module"] = "neorg/modules/core/defaults/module.lua",
+               ["neorg.modules.core.dirman.module"] = "neorg/modules/core/dirman/module.lua",
+               ["neorg.modules.core.dirman.utils.module"] = "neorg/modules/core/dirman/utils/module.lua",
+               ["neorg.modules.core.esupports.hop.module"] = "neorg/modules/core/esupports/hop/module.lua",
+               ["neorg.modules.core.esupports.indent.module"] = "neorg/modules/core/esupports/indent/module.lua",
+               ["neorg.modules.core.esupports.metagen.module"] = "neorg/modules/core/esupports/metagen/module.lua",
+               ["neorg.modules.core.export.markdown.module"] = "neorg/modules/core/export/markdown/module.lua",
+               ["neorg.modules.core.export.module"] = "neorg/modules/core/export/module.lua",
+               ["neorg.modules.core.fs.module"] = "neorg/modules/core/fs/module.lua",
+               ["neorg.modules.core.highlights.module"] = "neorg/modules/core/highlights/module.lua",
+               ["neorg.modules.core.integrations.coq_nvim.module"] = "neorg/modules/core/integrations/coq_nvim/module.lua",
+               ["neorg.modules.core.integrations.image.module"] = "neorg/modules/core/integrations/image/module.lua",
+               ["neorg.modules.core.integrations.nvim-cmp.module"] = "neorg/modules/core/integrations/nvim-cmp/module.lua",
+               ["neorg.modules.core.integrations.nvim-compe.module"] = "neorg/modules/core/integrations/nvim-compe/module.lua",
+               ["neorg.modules.core.integrations.otter.module"] = "neorg/modules/core/integrations/otter/module.lua",
+               ["neorg.modules.core.integrations.treesitter.module"] = "neorg/modules/core/integrations/treesitter/module.lua",
+               ["neorg.modules.core.integrations.treesitter.tests"] = "neorg/modules/core/integrations/treesitter/tests.lua",
+               ["neorg.modules.core.integrations.truezen.module"] = "neorg/modules/core/integrations/truezen/module.lua",
+               ["neorg.modules.core.integrations.zen_mode.module"] = "neorg/modules/core/integrations/zen_mode/module.lua",
+               ["neorg.modules.core.itero.module"] = "neorg/modules/core/itero/module.lua",
+               ["neorg.modules.core.journal.module"] = "neorg/modules/core/journal/module.lua",
+               ["neorg.modules.core.keybinds.keybinds"] = "neorg/modules/core/keybinds/keybinds.lua",
+               ["neorg.modules.core.keybinds.module"] = "neorg/modules/core/keybinds/module.lua",
+               ["neorg.modules.core.latex.renderer.module"] = "neorg/modules/core/latex/renderer/module.lua",
+               ["neorg.modules.core.links.module"] = "neorg/modules/core/links/module.lua",
+               ["neorg.modules.core.looking-glass.module"] = "neorg/modules/core/looking-glass/module.lua",
+               ["neorg.modules.core.mode.module"] = "neorg/modules/core/mode/module.lua",
+               ["neorg.modules.core.neorgcmd.commands.return.module"] = "neorg/modules/core/neorgcmd/commands/return/module.lua",
+               ["neorg.modules.core.neorgcmd.module"] = "neorg/modules/core/neorgcmd/module.lua",
+               ["neorg.modules.core.pivot.module"] = "neorg/modules/core/pivot/module.lua",
+               ["neorg.modules.core.presenter.module"] = "neorg/modules/core/presenter/module.lua",
+               ["neorg.modules.core.promo.module"] = "neorg/modules/core/promo/module.lua",
+               ["neorg.modules.core.qol.toc.module"] = "neorg/modules/core/qol/toc/module.lua",
+               ["neorg.modules.core.qol.todo_items.module"] = "neorg/modules/core/qol/todo_items/module.lua",
+               ["neorg.modules.core.queries.native.module"] = "neorg/modules/core/queries/native/module.lua",
+               ["neorg.modules.core.scanner.module"] = "neorg/modules/core/scanner/module.lua",
+               ["neorg.modules.core.storage.module"] = "neorg/modules/core/storage/module.lua",
+               ["neorg.modules.core.summary.module"] = "neorg/modules/core/summary/module.lua",
+               ["neorg.modules.core.syntax.module"] = "neorg/modules/core/syntax/module.lua",
+               ["neorg.modules.core.tangle.module"] = "neorg/modules/core/tangle/module.lua",
+               ["neorg.modules.core.tempus.module"] = "neorg/modules/core/tempus/module.lua",
+               ["neorg.modules.core.text-objects.module"] = "neorg/modules/core/text-objects/module.lua",
+               ["neorg.modules.core.todo-introspector.module"] = "neorg/modules/core/todo-introspector/module.lua",
+               ["neorg.modules.core.ui.calendar.module"] = "neorg/modules/core/ui/calendar/module.lua",
+               ["neorg.modules.core.ui.calendar.views.monthly"] = "neorg/modules/core/ui/calendar/views/monthly.lua",
+               ["neorg.modules.core.ui.module"] = "neorg/modules/core/ui/module.lua",
+               ["neorg.modules.core.ui.selection_popup"] = "neorg/modules/core/ui/selection_popup.lua",
+               ["neorg.modules.core.ui.text_popup"] = "neorg/modules/core/ui/text_popup.lua",
+               ["neorg.modules.core.upgrade.module"] = "neorg/modules/core/upgrade/module.lua"
+            }
+         }
+      }
+   },
+   ["nvim-nio"] = {
+      ["1.9.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["nio.control"] = "nio/control.lua",
+               ["nio.curl"] = "nio/curl.lua",
+               ["nio.file"] = "nio/file.lua",
+               ["nio.init"] = "nio/init.lua",
+               ["nio.logger"] = "nio/logger.lua",
+               ["nio.lsp"] = "nio/lsp.lua",
+               ["nio.lsp-types"] = "nio/lsp-types.lua",
+               ["nio.process"] = "nio/process.lua",
+               ["nio.streams"] = "nio/streams.lua",
+               ["nio.tasks"] = "nio/tasks.lua",
+               ["nio.tests"] = "nio/tests.lua",
+               ["nio.ui"] = "nio/ui.lua",
+               ["nio.util"] = "nio/util.lua",
+               ["nio.uv"] = "nio/uv.lua"
+            }
+         }
+      }
+   },
+   ["pathlib.nvim"] = {
+      ["2.2.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["nvim-nio"] = "1.9.4-1"
+            },
+            modules = {
+               ["pathlib.base"] = "pathlib/base.lua",
+               ["pathlib.const"] = "pathlib/const.lua",
+               ["pathlib.git"] = "pathlib/git.lua",
+               ["pathlib.init"] = "pathlib/init.lua",
+               ["pathlib.posix"] = "pathlib/posix.lua",
+               ["pathlib.utils.debug"] = "pathlib/utils/debug.lua",
+               ["pathlib.utils.errors"] = "pathlib/utils/errors.lua",
+               ["pathlib.utils.init"] = "pathlib/utils/init.lua",
+               ["pathlib.utils.lists"] = "pathlib/utils/lists.lua",
+               ["pathlib.utils.nuv"] = "pathlib/utils/nuv.lua",
+               ["pathlib.utils.paths"] = "pathlib/utils/paths.lua",
+               ["pathlib.utils.scheduler"] = "pathlib/utils/scheduler.lua",
+               ["pathlib.utils.tables"] = "pathlib/utils/tables.lua",
+               ["pathlib.utils.uri"] = "pathlib/utils/uri.lua",
+               ["pathlib.utils.watcher"] = "pathlib/utils/watcher.lua",
+               ["pathlib.utils.winapi_subset"] = "pathlib/utils/winapi_subset.lua",
+               ["pathlib.windows"] = "pathlib/windows.lua"
+            }
+         }
+      }
+   },
+   ["tree-sitter-norg"] = {
+      ["0.2.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["parser.norg"] = "parser/norg.so"
+            }
+         }
+      }
+   },
+   ["tree-sitter-norg-meta"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["parser.norg_meta"] = "parser/norg_meta.so"
+            }
+         }
+      }
+   }
+}
