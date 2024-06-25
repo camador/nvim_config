@@ -1,0 +1,212 @@
+rock_manifest = {
+   doc = {
+      ["cheatsheet.norg"] = "54eddb1efbdacf00ae130a4a9144b897",
+      ["neorg.norg"] = "33413f43c0698da0567a1617ee1c1f7b",
+      tags = "63afa1011a90deb3e5ab9b5106932bf0"
+   },
+   ftdetect = {
+      ["norg.lua"] = "d198377d9eec17abb7f70ed7d74d3c24"
+   },
+   lua = {
+      neorg = {
+         core = {
+            ["callbacks.lua"] = "7f3b695c1dc159d1a310b763f2388193",
+            ["config.lua"] = "8bf30bed87897c522b3369eb6f436e89",
+            ["init.lua"] = "10d5a66b2ea8bcd82d14ee0be063c3fb",
+            ["log.lua"] = "183ca2119424cf2ebe4680c20fa952e1",
+            ["modules.lua"] = "6a95e61e627079e0c1b26c52e6dee976",
+            ["utils.lua"] = "6ccc510228ee00fef364f864575e348f"
+         },
+         external = {
+            ["log.lua"] = "d41d8cd98f00b204e9800998ecf8427e"
+         },
+         ["health.lua"] = "b944489885ce7df3850c5fa43042d921",
+         ["init.lua"] = "6a44f520d0e8d0bb58578ac57e4c34b8",
+         modules = {
+            core = {
+               autocommands = {
+                  ["module.lua"] = "db928a1f765ed992c32fd19a4d569814"
+               },
+               clipboard = {
+                  ["code-blocks"] = {
+                     ["module.lua"] = "b476581cfa3c171d4196a7f31af38a2c"
+                  },
+                  ["module.lua"] = "ed1ce5ce3644e61e382101ebaaa1c3f5"
+               },
+               completion = {
+                  ["module.lua"] = "d1952c1e515cd14fde726f51320f6d33"
+               },
+               concealer = {
+                  ["module.lua"] = "f6fc8adf8ed783c2ac58bd19898af487",
+                  ["preset_basic.lua"] = "e9806afe1f541220f8eb44d8499bc3f4",
+                  ["preset_diamond.lua"] = "91b9b4e77712325351298dbf44a8b01f",
+                  ["preset_varied.lua"] = "bc42e7e84280f102bcf2e527cf1c139c"
+               },
+               defaults = {
+                  ["module.lua"] = "50436b16b1106fc6d092643914824f46"
+               },
+               dirman = {
+                  ["module.lua"] = "eeafb5a2684b7e74bce3ba78d553012f",
+                  utils = {
+                     ["module.lua"] = "0451d206c728136749b1608c5b62956d"
+                  }
+               },
+               esupports = {
+                  hop = {
+                     ["module.lua"] = "904616260798489e8bc7696e27d1fda9"
+                  },
+                  indent = {
+                     ["module.lua"] = "d922234d01b9a8a018e65855d5227450"
+                  },
+                  metagen = {
+                     ["module.lua"] = "5d09099225bb9ec9369592fc221f1f26"
+                  }
+               },
+               export = {
+                  markdown = {
+                     ["module.lua"] = "c0d1664831f585f112579a0c7cdced36"
+                  },
+                  ["module.lua"] = "65f204fcb22ff9fbb8553915879afccb"
+               },
+               fs = {
+                  ["module.lua"] = "3ae11f0706adc16e2c2cc6e64f2a2c4a"
+               },
+               highlights = {
+                  ["module.lua"] = "5d6fd62268d39da6fc234ac5e920a89b"
+               },
+               integrations = {
+                  coq_nvim = {
+                     ["module.lua"] = "dcafe25bbcb5b6d91b28345d05559a5a"
+                  },
+                  image = {
+                     ["module.lua"] = "5d5873d35f7887bf229714a1d422f89e"
+                  },
+                  ["nvim-cmp"] = {
+                     ["module.lua"] = "db4adbd9be88667721187d34f8281b73"
+                  },
+                  ["nvim-compe"] = {
+                     ["module.lua"] = "6d20a79f3d275d5d9521563bb76820f7"
+                  },
+                  otter = {
+                     ["module.lua"] = "f6b990b66680438984f9ef55e795e797"
+                  },
+                  treesitter = {
+                     ["module.lua"] = "3ac9b1b1860a04b929dffbd0be1d285a",
+                     ["tests.lua"] = "8f1bb29d5b4004c5db0bd1c92f38d713"
+                  },
+                  truezen = {
+                     ["module.lua"] = "336ed5a65cb50a605ee96bb07e584933"
+                  },
+                  zen_mode = {
+                     ["module.lua"] = "030a2f58822c6453decb425f95116031"
+                  }
+               },
+               itero = {
+                  ["module.lua"] = "fce2daf15d0b70f3aaf769d57583b007"
+               },
+               journal = {
+                  ["module.lua"] = "7cbb32725b7a13a1cc8a6d645b1fe9b6"
+               },
+               keybinds = {
+                  ["keybinds.lua"] = "deacd434348d5fddfcaa08d9154a9505",
+                  ["module.lua"] = "f5931f1a2ae47c080f3e067a231e3081"
+               },
+               latex = {
+                  renderer = {
+                     ["module.lua"] = "c790cc61ccd56179502aaef79fa43787"
+                  }
+               },
+               links = {
+                  ["module.lua"] = "051f57a8a7c47d99fa1dca73421af6f0"
+               },
+               ["looking-glass"] = {
+                  ["module.lua"] = "ae8014bfd1d5cbf974954d146413987e"
+               },
+               mode = {
+                  ["module.lua"] = "ab98d1a9b9805154c47ae45e82f41415"
+               },
+               neorgcmd = {
+                  commands = {
+                     ["return"] = {
+                        ["module.lua"] = "38131592d5e24d4eb5d9e6c230634cbd"
+                     }
+                  },
+                  ["module.lua"] = "59e6f009268e32daf82107d2c58a2d44"
+               },
+               pivot = {
+                  ["module.lua"] = "93c3bcb6a2e123eb8a28334b0ce3d6c5"
+               },
+               presenter = {
+                  ["module.lua"] = "755d780842e6e8b38241469ccac162eb"
+               },
+               promo = {
+                  ["module.lua"] = "673ca2a57652ff6b64ecff51029e3eb9"
+               },
+               qol = {
+                  toc = {
+                     ["module.lua"] = "854ab3cae4b8f14ac1c2d883b3b3908a"
+                  },
+                  todo_items = {
+                     ["module.lua"] = "42d794800ab6e6f8f8a9fad64a36e3be"
+                  }
+               },
+               queries = {
+                  native = {
+                     ["module.lua"] = "4f82046a6916f51fc95670933f7920eb"
+                  }
+               },
+               scanner = {
+                  ["module.lua"] = "a6c4c303738e154bbcd792713c04a8c3"
+               },
+               storage = {
+                  ["module.lua"] = "d15e5ab3531bcdfc1ef2910617327262"
+               },
+               summary = {
+                  ["module.lua"] = "6787b249832200de0aba539bc046b35b"
+               },
+               syntax = {
+                  ["module.lua"] = "32e7f774e7821f6234a35cb74604489c"
+               },
+               tangle = {
+                  ["module.lua"] = "6ddad27156eb84bca4f6cffadcc23125"
+               },
+               tempus = {
+                  ["module.lua"] = "f98644bb5ce9ce69dd4ecf0a399dd413"
+               },
+               ["text-objects"] = {
+                  ["module.lua"] = "39c8ff3c09864ee53f6e84236f72e298"
+               },
+               ["todo-introspector"] = {
+                  ["module.lua"] = "c814d17d12121de4b26993d291a11bbf"
+               },
+               ui = {
+                  calendar = {
+                     ["module.lua"] = "0dae41b1c85670ab9128d6c2a37943f3",
+                     views = {
+                        ["monthly.lua"] = "bf0ee856833ba809c18f2318d11767e2"
+                     }
+                  },
+                  ["module.lua"] = "0c17d0d964b1aab21b14b94552e09213",
+                  ["selection_popup.lua"] = "fe2bd6b3bc297491f3711dc40c92083d",
+                  ["text_popup.lua"] = "354aed1cdfb2a7bd930bf2f74c215a6b"
+               },
+               upgrade = {
+                  ["module.lua"] = "8970f0cd40abcd8025641b7543b109a1"
+               }
+            }
+         }
+      }
+   },
+   ["neorg-scm-1.rockspec"] = "3d38cdc327314e11a305aefc6c9511d3",
+   queries = {
+      norg = {
+         ["folds.scm"] = "5206870a73a5c9828e3136e62dc46023",
+         ["highlights.scm"] = "794a66f3bda7cb63ce19034442be5552",
+         ["injections.scm"] = "89031b878dc6f323ff15334673b7d912"
+      },
+      norg_meta = {
+         ["highlights.scm"] = "144f6ff208b7f6a6326ba16d719ecd02",
+         ["indents.scm"] = "8d603ff0c1ffe99a81d7722459bcf299"
+      }
+   }
+}
