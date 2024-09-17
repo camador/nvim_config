@@ -8,6 +8,6 @@ require("mason-lspconfig").setup({
     "pyright",
     "rust_analyzer",
     "solargraph",
-    "tsserver",
+    "ts_ls",
   },
 })

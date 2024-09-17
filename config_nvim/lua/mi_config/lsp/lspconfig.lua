@@ -38,7 +38,7 @@ lspconfig.pyright.setup {}
 lspconfig.rust_analyzer.setup {}
 lspconfig.solargraph.setup {}
 lspconfig.tailwindcss.setup {} -- npm install @tailwindcss/language-server
-lspconfig.tsserver.setup {}
+lspconfig.ts_ls.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
