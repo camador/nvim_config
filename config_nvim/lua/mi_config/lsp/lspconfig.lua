@@ -1,23 +1,18 @@
 -- Setup language servers.
-local lspconfig = require('lspconfig')
-lspconfig.lua_ls.setup {
-  settings = {
-    Lua = {
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        -- Evita el warning 'Undefined global vim' en los ficheros de configuración .lua
-        globals = { 'vim' },
-      }
-    }
-  }
-}
+local lspconfig = vim.lsp.config
+
 -- Servers: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-lspconfig.cssls.setup {
+
+vim.lsp.config('cssls', {
   capabilities = capabilities,
-} -- npm install vscode-langservers-extracted
-lspconfig.dockerls.setup {}
-lspconfig.docker_compose_language_service.setup {
+}) -- npm install vscode-langservers-extracted
+vim.lsp.enable('cssls')
+
+vim.lsp.config('dockerls', {})
+vim.lsp.enable('dockerls')
+
+vim.lsp.config('docker_compose_language_service', {
   vim.api.nvim_exec([[
     autocmd BufRead,BufNewFile compose.yml set filetype=yaml.docker-compose
     autocmd BufRead,BufNewFile compose.yaml set filetype=yaml.docker-compose
@@ -28,17 +23,34 @@ lspconfig.docker_compose_language_service.setup {
     autocmd BufRead,BufNewFile docker-compose.override.yml set filetype=yaml.docker-compose
     autocmd BufRead,BufNewFile docker-compose.override.yaml set filetype=yaml.docker-compose
   ]], false)
-}
-lspconfig.dprint.setup {} -- https://github.com/nvimtools/none-ls.nvim/issues/58
-lspconfig.html.setup {
+})
+vim.lsp.enable('docker_compose_language_service')
+
+vim.lsp.config('dprint', {}) -- https://github.com/nvimtools/none-ls.nvim/issues/58
+vim.lsp.enable('dprint')
+
+vim.lsp.config('html', {
   capabilities = capabilities,
-}
-lspconfig.jdtls.setup({}) -- https://github.com/nvim-java/nvim-java
-lspconfig.pyright.setup {}
-lspconfig.rust_analyzer.setup {}
-lspconfig.solargraph.setup {}
-lspconfig.tailwindcss.setup {} -- npm install @tailwindcss/language-server
-lspconfig.ts_ls.setup {}
+})
+vim.lsp.enable('html')
+
+vim.lsp.config('jdtls', {}) -- https://github.com/nvim-java/nvim-java
+vim.lsp.enable('jdtls')
+
+vim.lsp.config('pyright', {})
+vim.lsp.enable('pyright')
+
+vim.lsp.config('rust_analyzer', {})
+vim.lsp.enable('rust_analyzer')
+
+vim.lsp.config('solargraph', {})
+vim.lsp.enable('solargraph')
+
+vim.lsp.config('tailwindcss', {}) -- npm install @tailwindcss/language-server
+vim.lsp.enable('tailwindcss')
+
+vim.lsp.config('ts_ls', {})
+vim.lsp.enable('ts_ls')
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
