@@ -10,4 +10,5 @@ local_share_nvim/telescope_history
 local_share_nvim/mason
 local_share_nvim/lazy
 local_share_nvim/lazy-rocks
+local_share_nvim/tree-sitter*
 config_nvim/lazy-lock.json
